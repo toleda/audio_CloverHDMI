@@ -2,8 +2,6 @@ audio_cloverHDMI
 ============
 Clover HDMI Audio - No Patching/Persistant
 
-OS X AMD/Nvidia/HD5K/HD4K/HD3K HDMI audio with Clover
-
 Clover HDMI audio enables HDMI, DP and DVI audio with patched or native Mavericks AppleHDA.kext. Clover provides audio and graphic's binary patching while preserving native kext installation.
 
 Requirements

@@ -59,7 +59,7 @@ Required Information (Select one from each category)
 	3. Nvidia/GT/GTS/GTX 4xx/5xx/6xx/7xx - Not applicable
   6. Mavericks version
 	1. 10.9.2(-92) works in 10.9.2 or newer, does not work in 10.9 or 10.9.1
-	2. 10.9.1(-91) works in 10.9.1 or newer, does not work in 10.9.0
+	2. 10.9.1(-91) works in 10.9.1 or newer, does not work in 10.9
 	3. 10.9 (-90) works in 10.9 or newer
 
 Installation

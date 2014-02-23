@@ -59,8 +59,8 @@ Required Information (Select one from each category)
 	   3. AMD HD5xxx - AMD5000Controller.kext
 	3. Nvidia/GT/GTS/GTX 4xx/5xx/6xx/7xx - Not applicable
   6. Mavericks version
-	1. 10.9.2(-92) works in 10.9.2 or newer, does not work in 10.9 or 10.9.1
-	2. 10.9.1(-91) works in 10.9.1 or newer, does not work in 10.9
+	1. 10.9.2(-92) works in 10.9.2 or newer, works in 10.9 and 10.9.1
+	2. 10.9.1(-91) works in 10.9.1 or newer
 	3. 10.9 (-90) works in 10.9 or newer
 
 Installation

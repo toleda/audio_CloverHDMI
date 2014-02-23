@@ -48,7 +48,7 @@ Required Information (Select one from each category)
 	      - https://github.com/toleda/audio_hdmi_uefi/tree/master/ssdt_7series
 	   3. 6series/HD3000/AMD/Nvidia
 	      - https://github.com/toleda/audio_hdmi_hd3000/tree/master/ssdt_6series
-  4. HDMI Audio framebuffer edits (Note 3)
+  5. HDMI Audio framebuffer edits (Note 3)
 	1. Intel HD Graphics - see https://github.com/toleda/graphics_Intel_framebuffers
 	   1. Intel HD4600 - AppleIntelFramebufferAzul.kext
 	   2. Intel HD4000 - AppleIntelFramebufferCapri.kext
@@ -72,18 +72,16 @@ Installation
 	  2. Devices/Audio/Inject/Layout (1, 2 or 3)  
 	  3. Save
   2. HDMI Audio ACPI Patching
-     1. Clover injection (to be added)
+     1. Clover injection (See above, Requirements/4. HDMI Audio ACPI patching/1.)
 	1. Clover/config.plist	
      2. dsdt injection
 	1. Clover/config.plist
-	   1. ACPI/DSDT/
-	      1. DSDT.aml/DSDT.aml
+	   1. ACPI/DSDT/Name/DSDT.aml
 	2.HDMI audio edited dsdt
 	   1. Install EFI/Clover/ACPI/Patched/dsdt.aml
      3. ssdt injection
 	1. Clover/config.plist
-	   1. ACPI/Select:
-	      1. DropOEM/DropOEM
+	   1. ACPI/SSDT/DropOEM/YES
 	2. HDMI audio edited ssdt
 	   1. Installation EFI/Clover/ACPI/Patched/ssdt.aml
   3. Restart

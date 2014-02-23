@@ -124,7 +124,7 @@ Notes
 	   1. Copy specific patch from config-hdmi...plist
 	   2. Paste patch to same property in EFI/Clover/config.plist
 	   3. Save
-  5. Do not boot config-hemi_....plist, graphics support only
+  5. Do not boot config-hdmi_....plist, graphics support only
 
 Tools:
   1. Clover Configurator - http://www.osx86.net/files/file/49-clover-configurator/

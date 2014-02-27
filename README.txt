@@ -21,9 +21,9 @@ Required Information (Select one from each category)
 	3. HD4000/HD3000/AMD/Nvidia
   3. Graphics Connector Audio Support
 	1. HD46000+ - HDMI, DP, DVI (max 2 audio, 3 video)
-	2. HD4000/HD3000 - HDMI, DP (max 1 audio (Note 2), 2 video)
+	2. HD4000/HD3000 - HDMI, DP (max 1 audio (Note 2, below), 2 video)
 	3. AMD - HDMI, DP (max 6 DP, 1 HDMI)
-	4. Nvidia - HDMI, DP, DVI (max Fermi 2 audio, Kepler 4 audio)
+	4. Nvidia - HDMI, DP, DVI (max Fermi: 2 audio/video, Kepler: 4 audio/video)
   4. HDMI Audio ACPI patching
 	1. Clover Injection
 	   1. HD4600 - TBA
@@ -32,7 +32,10 @@ Required Information (Select one from each category)
 	      2. Graphics/Intel/Yes
 	      3. Graphics/ig-platform-id/0x0166000a
 	   1. HD3000 - TBA
-	   1. AMD - TBA
+	   1. AMD (without Integrated Graphics)
+	      1. ACPI/DSDT/Fixes/
+		 1. NewWay_80000000/YES
+		 2. AddHDMI_8000000/YES
 	   1. Nvidia - TBA
 	2. dsdt patches (Intel motherboard series/Intel graphics/discrete graphics)
 	   1. 8series/HD4600/AMD/Nvidia - https://github.com/toleda/audio_hdmi_8series

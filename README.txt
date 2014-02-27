@@ -6,7 +6,7 @@ Clover HDMI Audio - No Patching/Persistant
 Clover HDMI audio enables HDMI, DP and DVI audio with patched or native Mavericks AppleHDA.kext. Clover provides audio and graphic's binary patching while preserving native kext installation.
 
 Requirements
-  1. Clover (2512 or newer)
+  1. Clover (2612 or newer)
   2. Mavericks (10.9 or newer)
   3. Patched RealtekALC or native Mavericks AppleHDA.kext
   4. Mavericks recognized and enabled graphics (Intel/AMD/Nvidia as installed)
@@ -91,6 +91,7 @@ Installation
 Issues
   1. Clover 2565 and newer - AMD HDMI audio w/HD4000 may not work
   2. Clover 2570 and newer - HD4000/HDMI audio ssdt may not work
+     1. Fix: w/ssdt, use HDMI Audio ACPI patching/Clover Injection/HD4000 (above)
 
 Notes
   1. Layout Definitions
@@ -99,7 +100,7 @@ Notes
 	3 - HD3000/HD4000 HDMI audio and analog audio
   2. HD4000/HD3000 HDMI audio
 	1. Limited to one display w/patched AppleHDA.kext
-	2, Supports 2 displays
+	2. Supports 2 displays
 	   1. Native AppleHDA.kext
 	   2. AppleHDA.kext customization, see https://github.com/toleda/audio_ALCInjection/blob/master/M-Realtek_ALC_AppleHDA_Customization.pdf.zip
   3. Framebuffer Edits

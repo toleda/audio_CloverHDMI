@@ -45,11 +45,13 @@ Required Information (Select one from each category)
 	   5. 6series/HD3000/AMD/Nvidia - https://github.com/toleda/audio_hdmi_hd3000
 	   6. 5series/AMD/Nvidia - https://github.com/toleda/audio_hdmi_5series
 	2. edited ssdts (Intel motherboard series/Intel graphics/discrete graphics)
-	   1. 8series/HD4600/AMD/Nvidia
+	   1. 8series/HD4600/AMD/Nvidia (AMI UEFI)
 	      - https://github.com/toleda/audio_hdmi_8series/tree/master/ssdt_8series
-	   2. 7series/HD4000/AMD/Nvidia - 
+	   2. 7series/HD4000/AMD/Nvidia (AMI UEFI)
 	      - https://github.com/toleda/audio_hdmi_uefi/tree/master/ssdt_7series
-	   3. 6series/HD3000/AMD/Nvidia
+	   3. 6series/HD3000/AMD/Nvidia (AMI UEFI)
+	      - https://github.com/toleda/audio_hdmi_uefi/tree/master/ssdt_6series
+	   4. 6series/HD3000/AMD/Nvidia (AMI BIOS)
 	      - https://github.com/toleda/audio_hdmi_hd3000/tree/master/ssdt_6series
   5. HDMI Audio framebuffer edits (Note 3)
 	1. Intel HD Graphics - see https://github.com/toleda/graphics_Intel_framebuffers

@@ -3,7 +3,13 @@ audio_cloverHDMI
 OS X AMD/Nvidia/HD5K/HD4K/HD3K HDMI audio with Clover
 Clover HDMI Audio - No Patching/Persistant
 
-Clover HDMI audio enables HDMI, DP and DVI audio with patched or native Mavericks AppleHDA.kext. HDMI audio ACPI edits are enabled with dsdt edits, edited ssdts or Clover injection/dsdt patching.  Clover provides audio and graphic binary patching while preserving native kext installation. 
+Clover HDMI audio enables HDMI, DP and DVI audio with patched or native Mavericks AppleHDA.kext. HDMI audio ACPI edits are enabled with dsdt edits, edited ssdts or Clover injection/dsdt patching.  Clover provides audio and graphic binary patching while preserving native kext installation.
+
+Recommendation
+  1. Achieve stable system before enabling HDMI audio:
+     1. Boot from hard drive
+     2. Recognized graphics
+     3. Working onboard audio
 
 Requirements
   1. Clover (2612 or newer)

@@ -59,16 +59,13 @@ Required Information (Select one from each category)
 	      - https://github.com/toleda/audio_hdmi_uefi/tree/master/ssdt_6series
 	   4. 6series/HD3000/AMD/Nvidia (AMI BIOS)
 	      - https://github.com/toleda/audio_hdmi_hd3000/tree/master/ssdt_6series
-  5. HDMI Audio framebuffer edits (Note 3)
-	1. Intel HD Graphics - see https://github.com/toleda/graphics_Intel_framebuffers
-	   1. Intel HD4600 - AppleIntelFramebufferAzul.kext
-	   2. Intel HD4000 - AppleIntelFramebufferCapri.kext
-	   3. Intel HD3000 - AppleIntelSNBGraphicsFB.kext
-	2. AMD Radeon - see http://www.insanelymac.com/forum/topic/249642-editing-custom-personalities-for-ati-radeon-hd45xxx/
-  	   1. AMD R9/R7/HD7xxx - AMD7000Controller.kext
-	   2. AMD HD6xxx - AMD6000Controller.kext
-	   3. AMD HD5xxx - AMD5000Controller.kext
-	3. Nvidia/GT/GTS/GTX 4xx/5xx/6xx/7xx - Not applicable
+  5. HDMI Audio framebuffer edits (kext edits, Note 3)
+	1. Working Clover framebuffer edits
+	   1. HD4600 - config-hdmi_hd4600-92.plist.zip
+	   2. HD4600 - config-hdmi_hd4600-90.plist.zip
+	   3. HD4000 - config-hdmi_hd4000-90.plist.zip
+	   4. HD3000 - config-hdmi_hd3000-90.plist.zip
+	   5. AMD/HD77750 - config-hdmi_hd7750-90.plist.zip
   6. Mavericks version
 	1. 10.9.2(-92) works in 10.9.2 or newer, works in 10.9 and 10.9.1
 	2. 10.9.1(-91) works in 10.9.1 or newer
@@ -114,17 +111,20 @@ Notes
 	2. Supports 2 displays
 	   1. Native AppleHDA.kext
 	   2. AppleHDA.kext customization, see https://github.com/toleda/audio_ALCInjection/blob/master/M-Realtek_ALC_AppleHDA_Customization.pdf.zip
-  3. Framebuffer Edits
-	1. Working Clover framebuffer edits
-	   1. HD4600 - config-hdmi_hd4600-92.plist.zip
-	   2. HD4600 - config-hdmi_hd4600-90.plist.zip
-	   3. HD4000 - config-hdmi_hd4000-90.plist.zip
-	   4. HD3000 - config-hdmi_hd3000-90.plist.zip
-	   5. AMD/HD77750 - config-hdmi_hd7750-90.plist.zip
-	2. Intel framebuffer edits, 
-	   1. See toleda/graphics_intel_framebuffer
-	3. AMD framebuffer edits likely specific to particular graphics card
-	   1. http://www.insanelymac.com/forum/topic/291117-how-to-make-radeon-desktop-or-mobility-be-working-by-using-clover/
+  3. Framebuffer kext edits
+	1. Intel HD Graphics - see https://github.com/toleda/graphics_Intel_framebuffers
+	   1. Intel HD4600 - AppleIntelFramebufferAzul.kext
+	   2. Intel HD4000 - AppleIntelFramebufferCapri.kext
+	   3. Intel HD3000 - AppleIntelSNBGraphicsFB.kext
+	2. AMD framebuffer edits - likely specific to particular graphics card
+	   1. Edit Guides
+	      1. http://www.insanelymac.com/forum/topic/291117-how-to-make-radeon-desktop-or-mobility-be-working-by-using-clover/
+	      2. http://www.insanelymac.com/forum/topic/249642-editing-custom-personalities-for-ati-radeon-hd45xxx/
+	   2. Kexts
+  	      1. AMD R9/R7/HD7xxx - AMD7000Controller.kext
+	      2. AMD HD6xxx - AMD6000Controller.kext
+	      3. AMD HD5xxx - AMD5000Controller.kext
+	3. Nvidia/GT/GTS/GTX 4xx/5xx/6xx/7xx - Not applicable
   4. Clover/config.plist 
 	1. plist Editors
 	   1. Clover Configurator (1 window)

@@ -30,7 +30,7 @@ Required Information (Select one from each category)
 	2. HD4000/HD3000 - HDMI, DP (max 1 audio (Note 2, below), 2 video)
 	3. AMD - HDMI, DP (max 6 DP, 1 HDMI)
 	4. Nvidia - HDMI, DP, DVI (max Fermi: 2 audio/video, Kepler: 4 audio/video)
-  4. HDMI Audio ACPI patching
+  4. HDMI Audio ACPI patching (Select 1, 2 or 3)
 	1. Clover Injection
 	   1. HD4600 - TBA
 	   2. HD4000
@@ -79,7 +79,7 @@ Installation
 	  1. KernelAndKextsPatches/KextsToPatch/hdmi... (hdmi audio patch(es))
 	  2. Devices/Audio/Inject/Layout (1, 2 or 3)  
 	  3. Save
-  2. HDMI Audio ACPI Patching
+  2. HDMI Audio ACPI Patching (Select 1, 2 or 3)
      1. Clover injection (See above, Requirements/4. HDMI Audio ACPI patching/1.)
 	1. Clover/config.plist	
      2. dsdt injection

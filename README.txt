@@ -33,16 +33,16 @@ Required Information (Select one from each category)
   4. HDMI Audio ACPI patching
 	1. Clover Injection
 	   1. HD4600 - TBA
-	   1. HD4000
+	   2. HD4000
 	      1. Devices/InjectIntelHDMI/YES
 	      2. Graphics/Intel/Yes
 	      3. Graphics/ig-platform-id/0x0166000a
-	   1. HD3000 - TBA
-	   1. AMD (without Integrated Graphics)
+	   3. HD3000 - TBA
+	   4. AMD (without Integrated Graphics)
 	      1. ACPI/DSDT/Fixes/
 		 1. NewWay_80000000/YES
 		 2. AddHDMI_8000000/YES
-	   1. Nvidia - TBA
+	   5. Nvidia - TBA
 	2. dsdt patches (Intel motherboard series/Intel graphics/discrete graphics)
 	   1. 8series/HD4600/AMD/Nvidia - https://github.com/toleda/audio_hdmi_8series
 	   2. 7series/HD4000/AMD/Nvidia - https://github.com/toleda/audio_hdmi_uefi
@@ -50,7 +50,7 @@ Required Information (Select one from each category)
 	   4. 7series/HD3000/AMD/Nvidia - https://github.com/toleda/audio_hdmi_hd3000
 	   5. 6series/HD3000/AMD/Nvidia - https://github.com/toleda/audio_hdmi_hd3000
 	   6. 5series/AMD/Nvidia - https://github.com/toleda/audio_hdmi_5series
-	2. edited ssdts (Intel motherboard series/Intel graphics/discrete graphics)
+	3. edited ssdts (Intel motherboard series/Intel graphics/discrete graphics)
 	   1. 8series/HD4600/AMD/Nvidia (AMI UEFI)
 	      - https://github.com/toleda/audio_hdmi_8series/tree/master/ssdt_8series
 	   2. 7series/HD4000/AMD/Nvidia (AMI UEFI)

@@ -32,12 +32,12 @@ Required Information (Select one from each category)
 	4. Nvidia - HDMI, DP, DVI (max Fermi: 2 audio/video, Kepler: 4 audio/video)
   4. HDMI Audio ACPI patching (Select 1, 2 or 3)
 	1. Clover Injection
-	   1. HD4600 - TBA
+	   1. HD4600 - Not avialable
 	   2. HD4000
 	      1. Devices/InjectIntelHDMI/YES
 	      2. Graphics/Intel/Yes
 	      3. Graphics/ig-platform-id/0x0166000a
-	   3. HD3000 - TBA
+	   3. HD3000 - Not avialable
 	   4. AMD (without Integrated Graphics)
 	      1. ACPI/DSDT/Fixes/
 		 1. NewWay_80000000/YES

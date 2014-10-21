@@ -1,9 +1,11 @@
 audio_cloverHDMI
 ============
-OS X AMD/Nvidia/HD5K/HD4K/HD3K HDMI audio with Clover
+OS X AMD/Nvidia/Iris Pro/HD5000/HD4600/HD4000/HD3000 HDMI audio with Clover
 Clover HDMI Audio - No Patching/Persistant
 
 Clover HDMI audio enables HDMI, DP and DVI audio with patched or native Mavericks AppleHDA.kext. HDMI audio ACPI edits are enabled with dsdt edits, edited ssdts or Clover injection/dsdt patching.  Clover provides audio and graphic binary patching while preserving native kext installation.
+
+Credit: 10.10/TimeWalker
 
 Recommendation
   1. Achieve stable system before enabling HDMI audio:
@@ -134,7 +136,8 @@ Notes
 	   1. Copy specific patch from config-hdmi...plist
 	   2. Paste patch to same property in EFI/Clover/config.plist
 	   3. Save
-  5. Do not boot config-hdmi_....plist, graphics support only
+  5. HD4600 includes Iris Pro, HD5000 and HD4600
+  6. Do not boot config-hdmi_....plist, graphics support only
 
 Tools:
   1. Clover Configurator - http://www.osx86.net/files/file/49-clover-configurator/
@@ -157,6 +160,7 @@ Problem Reporting (include the following information)
 	2. http://www.insanelymac.com/forum/topic/292999-mavericks-applehda-hdmi-audio/
 
 Credit:
+TimeWalker75a Post #118, http://www.insanelymac.com/forum/topic/290783-intel-hd-graphics-4600-haswell-working-displayport/page-6#entry1949558
 PikeRAlpha https://pikeralpha.wordpress.com/2013/09/19/haswell-hdau-solution/
 bcc9 Post #11 - http://www.insanelymac.com/forum/topic/290783-intel-hd-graphics-4600-haswell-working-displayport/?p=1934889
 

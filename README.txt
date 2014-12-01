@@ -29,7 +29,8 @@ Installation
 	   a. Clover/config.plist
 	      i. ACPI/SSDT/DropTables/SaSsdt 
 	   b. HDMI audio edited ssdt
-	      i. Installation EFI/Clover/ACPI/patched/SSDT-1.aml (-1 as 	      appropriate)
+	      i. Installation EFI/Clover/ACPI/patched/SSDT-1.aml (-1 as 
+	      appropriate)
   C. Restart
   D. Verify HDMI Audio
 	1. System Preferences/Sound/Output/select HDMI

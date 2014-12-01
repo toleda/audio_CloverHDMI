@@ -14,7 +14,7 @@ Installation
 	1. Clover (Use Clover Configurator, Xcode, Property List Editor, etc.)
 	   a. Downloads/audio_CloverALC-master/config-hdmi_.....plist
 	   b. EFI/Clover/config.plist/Add
-	      i.   KernelAndKextsPatches/KextsToPatch/hdmi... (hdmi audio 		   patch(es))
+	      i.   KernelAndKextsPatches/KextsToPatch/hdmi... 
 	      ii.  Devices/Audio/Inject/Layout (1, 2 or 3)  
 	      iii. Save
   B. HDMI Audio ACPI Patching (Select 1, 2 or 3)
@@ -29,7 +29,7 @@ Installation
 	   1. Clover/config.plist
 	      i. ACPI/SSDT/DropTables/SaSsdt 
 	   2. HDMI audio edited ssdt
-	      i. Installation EFI/Clover/ACPI/patched/SSDT-1.aml (-1 as 	         appropriate)
+	      i. Installation EFI/Clover/ACPI/patched/SSDT-1.aml (-1 as 	      appropriate)
   C. Restart
   D. Verify HDMI Audio
 	1. System Preferences/Sound/Output/select HDMI
@@ -82,19 +82,19 @@ Required Information (Select one from each category)
 	   e. Nvidia - TBA
 	2. dsdt patches
 	   a. 9series/HD4600/AMD/Nvidia - 
-	      https://github.com/toleda/audio_hdmi_9series
+	https://github.com/toleda/audio_hdmi_9series
 	   b. 8series/HD4600/AMD/Nvidia - 
-	      https://github.com/toleda/audio_hdmi_8series
+	https://github.com/toleda/audio_hdmi_8series
 	   c. 7series/HD4000/AMD/Nvidia - 
-	      https://github.com/toleda/audio_hdmi_hd4000
+	https://github.com/toleda/audio_hdmi_hd4000
 	   d. 6series/HD4000/AMD/Nvidia - 
-	      https://github.com/toleda/audio_hdmi_hd4000
+	https://github.com/toleda/audio_hdmi_hd4000
 	   e. 7series/HD3000/AMD/Nvidia -
-	      https://github.com/toleda/audio_hdmi_hd3000
+	https://github.com/toleda/audio_hdmi_hd3000
 	   f. 6series/HD3000/AMD/Nvidia - 
-	      https://github.com/toleda/audio_hdmi_hd3000
+	https://github.com/toleda/audio_hdmi_hd3000
 	   g. 5series/AMD/Nvidia - 
-	      https://github.com/toleda/audio_hdmi_5series
+	https://github.com/toleda/audio_hdmi_5series
 	3. edited ssdts
 	   a. 9series/HD4600/AMD/Nvidia (AMI UEFI) - 
         https://github.com/toleda/audio_hdmi_8series/tree/master/ssdt_9series
@@ -147,7 +147,6 @@ https://github.com/toleda/audio_ALCInjection/blob/master/M-Realtek_ALC_AppleHDA_
 	2. AMD framebuffer edits - likely specific to particular graphics card
 	   a. Edit Guides
 	      i.   http://www.insanelymac.com/forum/topic/291117-how-to-make-radeon-desktop-or-mobility-be-working-by-using-clover/
-
 	      ii.   http://www.insanelymac.com/forum/topic/249642-editing-custom-personalities-for-ati-radeon-hd45xxx/
 
 	   b. Kexts

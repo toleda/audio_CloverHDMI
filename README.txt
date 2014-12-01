@@ -137,7 +137,6 @@ Notes
 	   a. Native AppleHDA.kext
 	   b. AppleHDA.kext customization - 
 https://github.com/toleda/audio_ALCInjection/blob/master/M-Realtek_ALC_AppleHDA_Customization.pdf.zip
-
   C. Framebuffer kext edits
 	1. Intel HD Graphics -
 	   https://github.com/toleda/graphics_Intel_framebuffers
@@ -148,7 +147,6 @@ https://github.com/toleda/audio_ALCInjection/blob/master/M-Realtek_ALC_AppleHDA_
 	   a. Edit Guides
 	      i.   http://www.insanelymac.com/forum/topic/291117-how-to-make-radeon-desktop-or-mobility-be-working-by-using-clover/
 	      ii.   http://www.insanelymac.com/forum/topic/249642-editing-custom-personalities-for-ati-radeon-hd45xxx/
-
 	   b. Kexts
   	      i.   AMD R9/R7/HD7xxx - AMD7000Controller.kext
 	      ii.  AMD HD6xxx - AMD6000Controller.kext
@@ -168,13 +166,9 @@ https://github.com/toleda/audio_ALCInjection/blob/master/M-Realtek_ALC_AppleHDA_
 
 Tools
   A. Clover Configurator - http://www.osx86.net/files/file/49-clover-configurator/
-
   B. Clover Wiki - http://clover-wiki.zetam.org/Home
-
   C. Property List Editor - Xcode, Property List Editor, PlistEdit Pro, TextEdit, etc.
-
   D. IOReg (Download/Select View Raw) - https://github.com/toleda/audio_ALCInjection/blob/master/IORegistryExplorer_v2.1.zip
-
   E. DPCIManger - http://sourceforge.net/projects/dpcimanager/
 
 Problem Reporting (include the following information)
@@ -189,7 +183,6 @@ Problem Reporting (include the following information)
 	8. EFI/Clover/ACPI/Patched/ssdt.aml (if installed)
   B. Post to
 	1. http://www.tonymacx86.com/hdmi-audio/112469-mavericks-hdmi-audio-applehda.html
-
 	2. http://www.insanelymac.com/forum/topic/292999-mavericks-applehda-hdmi-audio/
 
 Credit

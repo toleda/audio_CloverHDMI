@@ -19,16 +19,16 @@ Installation
 	      iii. Save
   B. HDMI Audio ACPI Patching (Select 1, 2 or 3)
 	1. Clover injection
-	   1. Clover/config.plist	
+	   a. Clover/config.plist	
 	2. dsdt injection
-	   1. Clover/config.plist
+	   a. Clover/config.plist
 	      i. ACPI/DSDT/Name/DSDT.aml
-	   2.HDMI audio edited dsdt
+	   b.HDMI audio edited dsdt
 	      i. Install EFI/Clover/ACPI/patched/dsdt.aml
 	3. ssdt injection
-	   1. Clover/config.plist
+	   a. Clover/config.plist
 	      i. ACPI/SSDT/DropTables/SaSsdt 
-	   2. HDMI audio edited ssdt
+	   b. HDMI audio edited ssdt
 	      i. Installation EFI/Clover/ACPI/patched/SSDT-1.aml (-1 as 	      appropriate)
   C. Restart
   D. Verify HDMI Audio

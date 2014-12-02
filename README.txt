@@ -72,14 +72,14 @@ Required Information (Select one from each category)
 	1. Clover Injection
 	   a. HD4600 - Not available
 	   b. HD4000
-	      i.   Devices/InjectIntelHDMI/YES
-	      ii.  Graphics/Intel/Yes
+	      i.   Devices/UseIntelHDMI/true
+	      ii.  Graphics/Intel/true
 	      iii. Graphics/ig-platform-id/0x0166000a
 	   c. HD3000 - Not available
 	   d. AMD (without Integrated Graphics)
 	      i.   ACPI/DSDT/Fixes/
-		 1. NewWay_80000000/YES
-		 2. AddHDMI_8000000/YES
+		 1. NewWay_80000000/true
+		 2. AddHDMI_8000000/true
 	   e. Nvidia - TBA
 	2. dsdt patches
 	   a. 9series/HD4600/AMD/Nvidia - 
@@ -179,7 +179,7 @@ Problem Reporting (include the following information)
 	4. Copy of IOReg - IOReg_v2.1/File/Save a Copy As…, verify file (not
            ioreg.txt)
 	5. EFI/Clover/config.plist
-	6. EFI/Clover/misc/debug.log (Set config.plist/Boot/Debug/YES)
+	6. EFI/Clover/misc/debug.log (Set config.plist/Boot/Debug/true)
 	7. EFI/Clover/ACPI/Patched/dsdt.aml (if installed)
 	8. EFI/Clover/ACPI/Patched/ssdt.aml (if installed)
   B. Post to

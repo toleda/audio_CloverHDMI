@@ -1,89 +1,245 @@
 ![alt text](https://github.com/toleda/audio_RealtekALC/blob/master/sound.jpeg)
-#audio_realtekALC
-**OS X/Patch in Place AppleHDA Realtek ALC Audio**  
-Native AppleHDA
+#audio_cloverHDMI
 
-The Realtek Realtek ALC Patched method enables OS X AppleHDA onboard with or without HDMI and DP audio.  The script patches the audio codec binary and installs pin configuration, layouts and platforms files.
+**OS X Intel HD Graphics/AMD/Nvidia HDMI audio with Clover**
+Clover HDMI Audio - No kext patching/Persistant
 
-**Updates**
+**Updates**  
+**1/15/16 - El Capitan support, cloverHDMI script**  
+12/2/14 - Yosemite, 9series support   
+Credit: TimeWalker/10.10+/HD4600 codec patch
 
-1. 11/8/15 - Skylake/Series 100 Update, Add 1150/Audio ID: 3
-2. 6/15/15 - 10.11 - El Capitan Realtek ALC AppleHDA.kext Initial Support
+Clover HDMI audio enables HDMI, DP and DVI audio with patched or native OS X AppleHDA.kext. HDMI audio ACPI edits are enabled with dsdt edits, edited ssdts or Clover injection/dsdt patching.  Clover provides audio and graphic binary patching while preserving native kext installation.  Supports Intel HD Graphics and/or AMD or Nvidia HDMI audio.
 
-**Versions: audio_realtekALC-110**
+cloverHDMI detects and installs the correct ssdt(s) and patches the Intel framebuffer for the connected display(s) enabling OS X HDMI audio.
 
-1. Easy: .command, see A. Installation
-2. Bash: .sh, see B. Terminal
+# Methods
+Install one method, uninstall before installing another method  
 
-**A. Installation**
+**I.		cloverHDMI** (script)  
 
-1. Patched AppleHDA.kext
-    1. [audio_realtekALC-110.command](https://github.com/toleda/audio_RealtekALC/blob/master/audio_realtekALC-110.command.zip) (select View Raw)
-    2. Double click Downloads/audio_realtekALC-110.command
-    3. Password:
-    4. Confirm Codec ALCxxx: (885, 887, 888, 889, 892, 898, 1150 only)
-    5. Enable HD4600 HDMI audio (y/n): (887, 892, 898, 1150 only)
-2. Verify Patched AppleHDA kext installed
-    1. S/L/E/AppleHDA.kext_vx.x-toledaALCxxx
-3. Restart
-4. Verify ALC onboard audio
-    1. System Preferences/Sound/Output/select audio device
+1. detects and installs appropriate ssdt(s)
+2. detects and installs appropriate Intel connector patches  
 
-**B. Terminal**
+**II.		ssdt** (user)  
 
-1. Clover patched AppleHDA
-    1. [audio_realtekALC-110.sh](https://github.com/toleda/audio_RealtekALC/blob/master/audio_realtekALC-110.sh) (select View Raw)
-    2. Terminal $ ./audio_cloverALC-110....sh
-    3. Same (as above)
+1. install appropriate ssdt
+2. install appropriate Intel connector patches (as required)
+3. install appropriate AMD connector patches (as required)  
 
-**C. Requirements**
+**III.		dsdt** (user)  
 
-1.  OS X/Chameleon/Chimera/Clover
-    1.  10.11/El Capitan, set boot flag: rootless=0 
-    2.  10.10/Yosemite, set boot flag: kext-dev-mode=1
-    3.  10.9/Mavericks
-    4.  10.8/Mountain Lion
-2.  Native AppleHDA.kext
-    1.  [Need native?](https://github.com/toleda/audio_ALC_guides/blob/master/Restore%20native%20AppleHDA%20%5BGuide%5D.pdf)
-3.  Supported Realtek onboard audio codec
-    1.  [Unknown codec?](https://github.com/toleda/audio_ALC_guides/blob/master/Identify%20Audio%20Codec%20%5BGuide%5D.pdf)
+1. edit dsdt (MaciASL) and install edited dsdt
+2. install appropriate Intel connector patches (as required)
+3. install appropriate AMD connector patches (as required)
 
-**D. Realtek ALCxxx** (verify codec and Audio ID)
+**IV.		Bootloader HDMI audio** (user)
 
-1.  Supported codecs
-    1.  269 (BRIX only)
-    2.  283 (BRIX Pro and NUC only)
-    3.  885
-    4.  887
-    5.  888
-    6.  889
-    7.  892
-    8.  898
-    9.  1150
-2.  Supported Audio IDs
-    -  Audio ID: 1 supports 269, 283, 885, 887, 888, 889, 892, 898, 1150  
-        Realtek ALC audio (default, 1/2/3/5/6 motherboard audio ports)
+1. no dsdt/ssdt/kext edits
 
-    -  Audio ID: 2 supports 887, 888, 889, 892, 898, 1150   
-        Realtek ALC/5.1 surround sound (3 motherboard audio ports) 
+Repo downloads: select link, select View Raw
+# HDMI Audio Installation
+# I.	cloverHDMI  
 
-    -  Audio ID: 3 supports 887, 888, 889, 892, 898, 1150  
-        HD3000/HD4000 HDMI audio with Realtek ALC audio
+1. Download: [audio_cloverHDMI-...command](https://github.com/toleda/audio_CloverHDMI/blob/master/audio_cloverHDMI-110.command.zip) (select View Raw)
+2. Installs HDMI audio ssdt(s) and edited config.plist
+	1. Intel/AMD/Nvidia: HDMI audio **ssdt** (EFI/CLOVER/ACPI/patched/)
+	2. Intel: DP2HDMI framebuffer edits (EFI/CLOVER/**config.plist**/KernelAndKextPatches/)
+3. Test Drive
+	1. Set audio_cloverHDMI-xxx.command/gDebug=1
+	2. Copy config.plist to Desktop
+	3. Continue with 4. Installation/Step 3
+4. Installation (performs all steps in Installation, below) 
+	1. Mount EFI
+	2. SIP enabled, OK
+	3. For Intel, HDMI displays only, unplug DP displays
+	4. Double click Downloads/audio_cloverHDMI-...command
+	5. Answer y/n questions
+	6. Password
+	7. Restart
+5. Terminal (output, see file/repo/above)
+	1. cloverHDMI-Intel&AMD/Nvidia
+	2. cloverHDMI-Intel
+	3. cloverHDMI-AMD/Nvidia
+6. Support
+	1. OS X: 10.11, 10.10, 10.9, 10.8
+	2. Intel/desktop series: 9, 8, 7, 6, 5
+	3. Intel/desktop/graphics hd (native GPU Power Management)
+		1. HD4600+, HD4000, HD3000
+	4. AMD/default framebuffer (ATY,AMD,RadeonFramebuffer)
+		1. R7/R9 3xx, R7/R9 2xx, 7xxx, 6xxx, 5xxx  
+		2. Except: GCN 1.1/Hawaii/Bonaire (AMD8000Controller.kext)
+	5. Nvidia (750, 9xx require Nvidia web drivers)
+		1. 9xx, 7xx, 6xx, 5xx, 4xx  
+		2. Except: 550, 560, 450 
 
-**E. More Information**
+# II - ssdt injection
+ Most systems; install ssdt and restart  
 
-1. [Audio ID Injection](https://github.com/toleda/audio_ALCInjection)
-2. [Details](https://github.com/toleda/audio_RealtekALC/blob/master/DETAILS.md)
-    1.  Realtek ALC Audio Solutions
-    2.  Requirements - Supported/Unsupported
-    3.  Notes
-    4.  Guides
-    5.  Tools
-    6.  Problem Reporting
-3. [Terminal Saved Output](https://github.com/toleda/audio_RealtekALC/blob/master/Terminal%20Saved%20Output_v1.0.4)
+1. Download [[Guide] HDMI audio/ssdt](https://github.com/toleda/audio_hdmi_guides/blob/master/%5BGuide%5D-OSX-hdmi_audio-hdef_audio-ssdt.pdf.zip)
+2. Note - BIOS/OS X updates do not effect ssdts
+3. edited ssdts, see dsdt/ssdt HDMI audio Guides below
+	1. [HD6000+/Desktop/BRIX/NUC](https://github.com/toleda/audio_hdmi_9series/tree/master/ssdt_hdmi-hd6000%2B)
+	2. [HD4600+/Desktop/BRIX/NUC](https://github.com/toleda/audio_hdmi_8series/tree/master/ssdt_hdmi-hd4600%2B)
+	3. [HD4000/Desktop/BRIX/NUC](https://github.com/toleda/audio_hdmi_hd4000/tree/master/ssdt_hdmi-hd4000)
+	4. [HD3000/Desktop](https://github.com/toleda/audio_hdmi_hd3000/tree/master/ssdt_hdmi-hd3000)
+	5. [AMD HDMI audio](https://github.com/toleda/audio_hdmi_amd-nvidia/tree/master/ssdt_hdmi-amd)
+	6. [Nvidia HDMI audio](https://github.com/toleda/audio_hdmi_amd-nvidia/tree/master/ssdt_hdmi-nvidia)
+	5. [ALC/HDEF audio](https://github.com/toleda/audio_ALCInjection/tree/master/ssdt_hdef)
+4. kext edits, if required, see **II/III - dsdt/ssdt HDMI audio Guides** below  
 
-Credit
-THe KiNG, bcc9, RevoGirl, PikeRAlpha, SJ_UnderWater, RehabMan, TimeWalker75a, lisai9093
+# III - dsdt edits
+All systems: extract dsdt, patch, install edited dsdt.
+
+1. Download [[Guide] HDMI audio/dsdt](https://github.com/toleda/audio_hdmi_guides/blob/master/%5BGuide%5D-OSX-hdmi_audio-hdef_audio-dsdt.pdf.zip)
+2. Notes
+	1. BIOS update require same dsdt edits on new installed BIOS
+	2. OS X updates do not effect dsdts
+	3. All Intel systems have a dsdt
+	4. AMD/Nvidia HDMI audio is installed
+3. dsdt edits/MaciASL, see **II/III - dsdt/ssdt HDMI audio Guides** below
+4. kext edits, if required, see **II/III - dsdt/ssdt HDMI audio Guides** below
+
+# II/III - dsdt/ssdt HDMI audio Guides
+Download appropriate guide from repo
+
+1. [HD6000+/Desktop/BRIX/NUC](https://github.com/toleda/audio_hdmi_9series)
+2. [HD4600+/Desktop/BRIX/NUC](https://github.com/toleda/audio_hdmi_8series)
+3. [HD4000/Desktop/BRIX/NUC](https://github.com/toleda/audio_hdmi_hd4000)
+4. [HD3000/Desktop](https://github.com/toleda/audio_hdmi_hd3000/tree/master/ssdt_hdmi-hd3000)
+5. [5 Series/X58/X79/X99/Desktop](https://github.com/toleda/audio_hdmi_5series) (dsdt edits only)
+6. Discrete Graphics (if installed)
+	1.	[AMD HDMI audio](https://github.com/toleda/audio_hdmi_guides/blob/master/%5BGuide%5D-OSX-AMD-hdmi_audio.pdf.zip)
+	2.	[Nvidia HDMI audio](https://github.com/toleda/audio_hdmi_guides/blob/master/%5BGuide%5D-OSX-Nvidia-hdmi_audio.pdf.zip)
+
+# IV - Bootloader HDMI audio
+
+1.	HD4000/HD3000
+	1.	Clover/EFI/CLOVER/Config.plist
+		1.	Devices/Audio/Inject/3
+		2.	Devices/UseIntelHDMI/YES
+		3.	Graphics/Inject/Intel/YES
+	2.	Chameleon: Extra/org.chameleon.Boot.plist
+		1.	HDAEnabler=Yes
+		2.	HDEFLayoutID=03000000
+2.	AMD/Nvidia (1st 2 ports only)
+	1.	Chameleon: Extra/org.chameleon.Boot.plist
+		1.	EnableHDMIAudio=Yes
+3.	AMD (no Intel Graphics HD)
+	1.	Clover/EFI/CLOVER/Config.plist
+		1.	ACPI/DSDT/Fixes/NewWay_80000000/YES
+		2.	ACPI/DSDT/Fixes/AddHDMI_8000000/YES 
+
+# HDMI Audio Details 
+
+**V - Before You Start**
+
+1.	OS X does not provide HDMI audio controls (No volume, no mute, no balance, etc.)
+2.	The connected HDMI device (TV, receiver, etc.) provides any and all audio control
+
+**VI - Additional Information**
+
+1.	[HDMI audio](https://github.com/toleda/audio_hdmi_guides)  
+2.	[HDEF audio](https://github.com/toleda/audio_ALC_guides)
+
+**VII - Requirements**  
+
+1.	OS X
+	1.	10.11+
+	2.	10.10+
+	3.	10.9+
+	4.	10.8+
+2.	Intel Desktop Motherboards
+	1.	9 Series - Z97, H97, B95
+	2.	8 Series - Z87, H87, B85, H81 ...
+	3.	7 Series - Z77, H77, B75 ...
+	4.	6 Series - Z68, P67, H67, H61 ...
+	5.	5 Series - P55, H55 ...
+3.	Graphics
+	1.	Intel HD Graphics (1st generation and prior, not supported)
+		1.	HD6000+ (BDW framebuffer edits required)
+		2.	HD4600+ (Azul framebuffer edits required)
+		3.	HD4000 (Capri framebuffer edits may be required)
+		4.	HD3000 (SNB framebuffer edits may be required)
+		5.	BDW/Azul/Capri/SNB kext edits
+			1.	Chameleon/ [Intel graphics kext edits](https://github.com/toleda/graphics_Intel_framebuffers)
+			2.	Clover/ [config-hdmi_HD ... plist edits](https://github.com/toleda/audio_CloverHDMI)
+	2.	AMD HD R7-R9 3xx/R7-R9 2xx/HD 7xxx/HD 6xxx/HD 5xxx (default framebufer)
+		1.	AppleHDAController and AMD70000Controller/AMD60000Controller/AMD50000Controller edits may be required, see [Editing custom personalities for ATI Radeon HD[45]xxx](http://www.insanelymac.com/forum/topic/249642-editing-custom-personalities-for-ati-radeon-hd45xxx/)
+		2.	AMD TrueAudio supported 10.10.4 and newer
+			1.	AMD9000Controller.kext/GCN1.2/Tonga/TrueAudio
+				⁃	HDMI/DP working
+			2.	AMD8000Controller.kext/GCN1.1/Hawaii/Bonaire/TrueAudio
+			⁃	HDMI/DP not working
+	3.	Nvidia 9xx/7xx/6xx/5xx/4xx (750 and 9xx require Nvidia Web driver)
+		1.	GTS 450, GTX 550, GTX 560 not supported natively
+			1.	550/560 fix available
+
+**VIII - Notes**
+
+1.	10.11 and newer/Boot flags (install/edit kexts and rebuild cache)
+	1.	CLOVER/config.plist/RtVariables/
+		1.	BooterConfig/0x28
+		2.	CsrActiveConfig/0x3
+	2. Chameleon - Extra/org.chameleon.Boot.plist
+		1.	CsrActiveConfig=3
+2.	10.10 and newer/Boot flags
+	1.	Clover/config.plist
+		1.	Mandatory, Add: Boot/Arguments/kext-dev-mode=1
+	2.	Chimera/Chameleon/Extra/org.chameleon.Boot.plist
+		1.	Mandatory:, Add: Kernel Flags//kext-dev-mode=1
+3.	HD4600/HD4400/Mobile - no native support
+	1. README: [RehabMan OS-X-Fake-PCI-ID](https://github.com/RehabMan/OS-X-Fake-PCI-ID)
+	1. Downloads: [RehabMan OS-X-Fake-PCI-ID](https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads)
+4.	S/L/E/AppleHDA.kext
+	1.	Native S/L/E/AppleHDA.kext
+	2.	HD4600/Desktop HDMI audio codec
+		1.	Chameleon: [HD4600/Desktop/AppleHDA edit](https://github.com/toleda/audio_hdmi_8series/blob/master/audio_hdmi_hd4600-hda-110.command.zip)
+		2.	Clover: [HD4600/Desktop/AppleHDA edit](https://github.com/toleda/audio_CloverHDMI/blob/master/config-hdmi_hd4600-100.plist.zip)
+5.	HD2000/HD2500 not supported
+
+**IX - Tools**
+
+1. [IOReg_v2.1](https://github.com/toleda/audio_ALCInjection/blob/master/IORegistryExplorer_v2.1.zip) (select View Raw)
+2. [DPCIManger](http://sourceforge.net/projects/dpcimanager/)  
+3. [MaciASL](http://sourceforge.net/projects/maciasl/)
+4. Property List Editors -
+	1. [Xcode](https://developer.apple.com/xcode/)  
+	2. Property List Editor, PlistEdit Pro, TextEdit, etc.
+	3. TextEdit, TextWrangler (last resort)
+4. [Clover Configurator](http://www.osx86.net/files/file/49-clover-configurator/)
+6. [Clover Wiki](http://clover-wiki.zetam.org/Home)
+
+**X - Problem Reporting** (no files atached, no reply)
+
+1.	Description of HDMI audio problem
+2.	OS X version/motherboard model/BIOS version/processor/graphics
+3.	Procedure/Guide used
+4.	Installed S/L/E/AppleHDA.kext
+5.	Copy of IOReg - IOReg_v2.1/File/Save a Copy As…, verify file (Tools 1.)
+6.	Screen shot/DPCIManager/Status (Tools 2.)
+7.	DPCIManager/Misc/Boot Log
+8.	MaciASL/File/Export Tableset As... (Tools 3.)
+9.	Terminal/Shell/File/Export Text As. . . /audio_cloverHDMI-110.command
+10.	Chameleon
+	1.	Extra/org.chameleon.Boot.plist
+	2.	DPCIManager/Misc/Boot Log
+	3.	Extra/dsdt.aml (if installed)
+	4.	Extra/ssdt.aml (if installed)
+11.	Clover
+	1.	EFI/CLOVER/config.plist
+	2.	EFI/CLOVER/misc/debug.log (Set config.plist/Boot/Debug/YES)
+		1.	or DPCIManager/Misc/Boot Log
+	3.	EFI/CLOVER/ACPI/Patched/dsdt.aml (if installed)
+	4.	EFI/CLOVER/ACPI/Patched/ssdt.aml (if installed)
+12.	Post to:
+	1.	[HDMI Audio - InsanelyMac](http://www.insanelymac.com/forum/topic/301137-yosemite-applehda-hdmi-audio/)
+	2. [HDMI Audio - tonymacx86.com](http://www.tonymacx86.com/hdmi-audio/)
+
+Credit  
+[TimeWalker75a Post #118](http://www.insanelymac.com/  forum/topic/290783-intel-hd-graphics-4600-haswell-working-displayport/page-6#entry1949558)  
+[PikeRAlpha](https://pikeralpha.wordpress.com/2013/09/19/haswell-hdau-solution/)  
+[bcc9 Post #11](http://www.insanelymac.com/forum/topic/290783-intel-hd-graphics-4600-haswell-working-displayport/?p=1934889)
 
 toleda
-https://github.com/toleda/audio_realtekALC
+https://github.com/toleda/audio_cloverHDMI

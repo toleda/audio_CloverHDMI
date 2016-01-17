@@ -1,0 +1,34 @@
+Intel only
+Answer y 2 times  (<<<<)
+
+Last login: Thu Jan 14 12:08:26 on ttys006
+,. . .:~ ...$ /Users/.../Desktop/audio_cloverHDMI-110_v1.0.command ; exit;
+
+File: audio_cloverALC-HDMI-110.command_v1.0
+EFI partition is mounted
+HD4600+ HDMI audio is not enabled
+Install SSDT-HDMI-HD4600+ HDMI audio ssdt (y/n): y  (<<<<)
+Download SSDT-HDMI-HD4600+ ...
+Password:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 44840  100 44840    0     0    98k      0 --:--:-- --:--:-- --:--:--   98k
+/Volumes/EFI/EFI/CLOVER/ACPI/patched/SSDT-HDMI-HD4600+ installed
+One display connected, proceeding
+Confirm DP to HDMI connector edit on port 0x5 (y/n): y  (<<<<)
+Patch port 0x5
+Download HD4600+ HDMI audio connector edits ...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1479  100  1479    0     0   4915      0 --:--:-- --:--:-- --:--:--  4913
+HDMI audio edited /Volumes/EFI/EFI/CLOVER/config.plist installed
+No AMD/Nvidia discrete graphics card found
+Install finished, restart required.
+To save a Copy of this Terminal session: Terminal/Shell/Export Text As ...
+logout
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+
+[Process completed]

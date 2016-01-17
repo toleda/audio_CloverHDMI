@@ -187,7 +187,7 @@ Download appropriate guide from repo
 	1.	Native S/L/E/AppleHDA.kext
 	2.	HD4600/Desktop HDMI audio codec
 		1.	Kext/binary patch: [HD4600/Desktop/AppleHDA edit](https://github.com/toleda/audio_hdmi_8series/blob/master/audio_hdmi_hd4600-hda-110.command.zip)
-		2.	Clover: [HD4600/Desktop/AppleHDA edit](https://github.com/toleda/audio_CloverHDMI/blob/master/config-hdmi_hd4600-100.plist.zip)
+		2.	Clover/kext patch: [HD4600/Desktop/AppleHDA edit](https://github.com/toleda/audio_CloverHDMI/blob/master/config-hdmi_hd4600-100.plist.zip)
 4.	HD2000/HD2500 not supported
 
 **IX - Tools**

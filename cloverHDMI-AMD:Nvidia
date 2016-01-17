@@ -1,0 +1,57 @@
+AMD or Nvidia only
+A. No Intel: Answer y 1 time  (<<<<)
+B. With Intel: Answer n 1 times and y 2 times (<<<<)
+
+A.
+Last login: Thu Jan 14 11:39:49 on ttys006
+. . .:~ ...$ /Users/.../Desktop/audio_cloverHDMI-110_v1.0.command ; exit;
+
+File: audio_cloverALC-HDMI-110.command_v1.0
+EFI partition is mounted
+Integrated Graphics is not installed/enabled
+AMD discrete graphics card 1002683f found on PEG0@1/GFX0@0
+AMD HDMI audio is not enabled
+Install AMD HDMI audio ssdt (y/n): y  (<<<<)
+Download SSDT-HDMI-AMD-PEG0 ...
+Password:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 44917  100 44917    0     0  81464      0 --:--:-- --:--:-- --:--:-- 81371
+/Volumes/EFI/EFI/CLOVER/ACPI/patched/SSDT-HDMI-AMD-PEG0.aml installed
+Install finished, restart required.
+To save a Copy of this Terminal session: Terminal/Shell/Export Text As ...
+logout
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+
+[Process completed]
+
+B.
+Last login: Thu Jan 14 11:51:52 on ttys006
+. . .:~ ...$ /Users/.../Desktop/audio_cloverHDMI-110_v1.0.command ; exit;
+
+File: audio_cloverALC-HDMI-110.command_v1.0
+EFI partition is mounted
+HD4600+ HDMI audio is not enabled
+Install SSDT-HDMI-HD4600+ HDMI audio ssdt (y/n): n  (<<<<)
+Continue to AMD/Nvidia HDMI audio (y/n): y  (<<<<)
+AMD discrete graphics card 1002683f found on PEG0@1/GFX0@0
+AMD HDMI audio is not enabled
+Install AMD HDMI audio ssdt (y/n): y  (<<<<)
+Download SSDT-HDMI-AMD-PEG0 ...
+Password:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 44917  100 44917    0     0   136k      0 --:--:-- --:--:-- --:--:--  136k
+/Volumes/EFI/EFI/CLOVER/ACPI/patched/SSDT-HDMI-AMD-PEG0.aml installed
+Install finished, restart required.
+To save a Copy of this Terminal session: Terminal/Shell/Export Text As ...
+logout
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+
+[Process completed]

@@ -40,6 +40,7 @@ Install one method, uninstall before installing another method
 Repo downloads: select link, select View Raw
 # HDMI Audio Installation
 # I.	cloverHDMI  
+Beta  
 
 1. Download: [audio_cloverHDMI-...command](https://github.com/toleda/audio_CloverHDMI/blob/master/audio_cloverHDMI-110.command.zip) (select View Raw)
 2. Installs HDMI audio ssdt(s) and edited config.plist
@@ -119,13 +120,7 @@ Download appropriate guide from repo
 		1.	Devices/Audio/Inject/3
 		2.	Devices/UseIntelHDMI/YES
 		3.	Graphics/Inject/Intel/YES
-	2.	Chameleon: Extra/org.chameleon.Boot.plist
-		1.	HDAEnabler=Yes
-		2.	HDEFLayoutID=03000000
-2.	AMD/Nvidia (1st 2 ports only)
-	1.	Chameleon: Extra/org.chameleon.Boot.plist
-		1.	EnableHDMIAudio=Yes
-3.	AMD (no Intel Graphics HD)
+2.	AMD (no Intel Graphics HD)
 	1.	Clover/EFI/CLOVER/Config.plist
 		1.	ACPI/DSDT/Fixes/NewWay_80000000/YES
 		2.	ACPI/DSDT/Fixes/AddHDMI_8000000/YES 
@@ -144,11 +139,11 @@ Download appropriate guide from repo
 
 **VII - Requirements**  
 
-1.	OS X
-	1.	10.11+
-	2.	10.10+
-	3.	10.9+
-	4.	10.8+
+1.  OS X Versions (+ all)
+    1.  10.11+/El Capitan 
+    2.  10.10+/Yosemite
+    3.  10.9+/Mavericks
+    4.  10.8+/Mountain Lion
 2.	Intel Desktop Motherboards
 	1.	9 Series - Z97, H97, B95
 	2.	8 Series - Z87, H87, B85, H81 ...
@@ -162,8 +157,8 @@ Download appropriate guide from repo
 		3.	HD4000 (Capri framebuffer edits may be required)
 		4.	HD3000 (SNB framebuffer edits may be required)
 		5.	BDW/Azul/Capri/SNB kext edits
-			1.	Chameleon/ [Intel graphics kext edits](https://github.com/toleda/graphics_Intel_framebuffers)
-			2.	Clover/ [config-hdmi_HD ... plist edits](https://github.com/toleda/audio_CloverHDMI)
+			1.	Kext/binary patch/ [Intel graphics kext edits](https://github.com/toleda/graphics_Intel_framebuffers)
+			2.	Clover/kext patch [config-hdmi_HD ... plist edits](https://github.com/toleda/audio_CloverHDMI)
 	2.	AMD HD R7-R9 3xx/R7-R9 2xx/HD 7xxx/HD 6xxx/HD 5xxx (default framebufer)
 		1.	AppleHDAController and AMD70000Controller/AMD60000Controller/AMD50000Controller edits may be required, see [Editing custom personalities for ATI Radeon HD[45]xxx](http://www.insanelymac.com/forum/topic/249642-editing-custom-personalities-for-ati-radeon-hd45xxx/)
 		2.	AMD TrueAudio supported 10.10.4 and newer
@@ -177,26 +172,23 @@ Download appropriate guide from repo
 
 **VIII - Notes**
 
-1.	10.11 and newer/Boot flags (install/edit kexts and rebuild cache)
-	1.	CLOVER/config.plist/RtVariables/
-		1.	BooterConfig/0x28
-		2.	CsrActiveConfig/0x3
-	2. Chameleon - Extra/org.chameleon.Boot.plist
-		1.	CsrActiveConfig=3
-2.	10.10 and newer/Boot flags
-	1.	Clover/config.plist
-		1.	Mandatory, Add: Boot/Arguments/kext-dev-mode=1
-	2.	Chimera/Chameleon/Extra/org.chameleon.Boot.plist
-		1.	Mandatory:, Add: Kernel Flags//kext-dev-mode=1
-3.	HD4600/HD4400/Mobile - no native support
+1. Boot Flags/Boot failure may result if ignored
+	1.	10.11+/Disable SIP/set, restart, install, enable SIP, restart
+		1.	CLOVER/config.plist/RtVariables/
+			1.	BooterConfig/0x28
+			2.	CsrActiveConfig/0x3
+	2.	10.10+/Allow unsigned kexts/set, restart, install
+		1.	Clover/config.plist
+			1.	Mandatory, Add: Boot/Arguments/kext-dev-mode=1
+2.	HD4600/HD4400/Mobile - no native support
 	1. README: [RehabMan OS-X-Fake-PCI-ID](https://github.com/RehabMan/OS-X-Fake-PCI-ID)
 	1. Downloads: [RehabMan OS-X-Fake-PCI-ID](https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads)
-4.	S/L/E/AppleHDA.kext
+3.	S/L/E/AppleHDA.kext
 	1.	Native S/L/E/AppleHDA.kext
 	2.	HD4600/Desktop HDMI audio codec
-		1.	Chameleon: [HD4600/Desktop/AppleHDA edit](https://github.com/toleda/audio_hdmi_8series/blob/master/audio_hdmi_hd4600-hda-110.command.zip)
+		1.	Kext/binary patch: [HD4600/Desktop/AppleHDA edit](https://github.com/toleda/audio_hdmi_8series/blob/master/audio_hdmi_hd4600-hda-110.command.zip)
 		2.	Clover: [HD4600/Desktop/AppleHDA edit](https://github.com/toleda/audio_CloverHDMI/blob/master/config-hdmi_hd4600-100.plist.zip)
-5.	HD2000/HD2500 not supported
+4.	HD2000/HD2500 not supported
 
 **IX - Tools**
 
@@ -217,23 +209,17 @@ Download appropriate guide from repo
 3.	Procedure/Guide used
 4.	Installed S/L/E/AppleHDA.kext
 5.	Copy of IOReg - IOReg_v2.1/File/Save a Copy As…, verify file (Tools 1.)
-6.	Screen shot/DPCIManager/Status (Tools 2.)
-7.	DPCIManager/Misc/Boot Log
+6.	Screenshot: DPCIManager/Status (Tools 2.) 
+7.	DPCIManager/Misc/Boot Log, atttach text file
 8.	MaciASL/File/Export Tableset As... (Tools 3.)
 9.	Terminal/Shell/File/Export Text As. . . /audio_cloverHDMI-110.command
-10.	Chameleon
-	1.	Extra/org.chameleon.Boot.plist
-	2.	DPCIManager/Misc/Boot Log
-	3.	Extra/dsdt.aml (if installed)
-	4.	Extra/ssdt.aml (if installed)
-11.	Clover
+10.	Clover
 	1.	EFI/CLOVER/config.plist
-	2.	EFI/CLOVER/misc/debug.log (Set config.plist/Boot/Debug/YES)
-		1.	or DPCIManager/Misc/Boot Log
+	2.	DPCIManager/Misc/Boot Log
 	3.	EFI/CLOVER/ACPI/Patched/dsdt.aml (if installed)
 	4.	EFI/CLOVER/ACPI/Patched/ssdt.aml (if installed)
-12.	Post to:
-	1.	[HDMI Audio - InsanelyMac](http://www.insanelymac.com/forum/topic/301137-yosemite-applehda-hdmi-audio/)
+11.	Post to:
+	1.	[HDMI Audio - InsanelyMac.com](http://www.insanelymac.com/forum/topic/301137-yosemite-applehda-hdmi-audio/)
 	2. [HDMI Audio - tonymacx86.com](http://www.tonymacx86.com/hdmi-audio/)
 
 Credit  

@@ -1,7 +1,7 @@
 ![alt text](https://github.com/toleda/audio_RealtekALC/blob/master/sound.jpeg)
 #audio_cloverHDMI
 
-**OS X Intel HD Graphics/AMD/Nvidia HDMI audio with Clover**
+**OS X Intel HD Graphics/AMD/Nvidia HDMI audio with Clover**  
 Clover HDMI Audio - No kext patching/Persistant
 
 **Updates**  
@@ -215,12 +215,12 @@ Download appropriate guide from repo
 9.	Terminal/Shell/File/Export Text As. . . /audio_cloverHDMI-110.command
 10.	Clover
 	1.	EFI/CLOVER/config.plist
-	2.	DPCIManager/Misc/Boot Log
+	2.	DPCIManager/Misc/Boot Log (Tools 2.)
 	3.	EFI/CLOVER/ACPI/Patched/dsdt.aml (if installed)
 	4.	EFI/CLOVER/ACPI/Patched/ssdt.aml (if installed)
 11.	Post to:
 	1.	[HDMI Audio - InsanelyMac.com](http://www.insanelymac.com/forum/topic/301137-yosemite-applehda-hdmi-audio/)
-	2. [HDMI Audio - tonymacx86.com](http://www.tonymacx86.com/hdmi-audio/)
+	2. [HDMI Audio - tonymacx86.com](http://www.tonymacx86.com/hdmi-audio/143760-audio-hdmi-audio-applehda-guide.html)
 
 Credit  
 [TimeWalker75a Post #118](http://www.insanelymac.com/  forum/topic/290783-intel-hd-graphics-4600-haswell-working-displayport/page-6#entry1949558)  

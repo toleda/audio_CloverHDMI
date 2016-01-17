@@ -59,9 +59,9 @@ Beta
 	6. Password
 	7. Restart
 5. Terminal (output, see file/repo/above)
-	1. cloverHDMI-Intel&AMD/Nvidia
-	2. cloverHDMI-Intel
-	3. cloverHDMI-AMD/Nvidia
+	1. [cloverHDMI-Intel with AMD or Nvidia](https://github.com/toleda/audio_CloverHDMI/blob/master/cloverHDMI-AMD:Nvidia)
+	2. [cloverHDMI-Intel](https://github.com/toleda/audio_CloverHDMI/blob/master/cloverHDMI-Intel)
+	3. [cloverHDMI-AMD or Nvidia](https://github.com/toleda/audio_CloverHDMI/blob/master/cloverHDMI-AMD:Nvidia)
 6. Support
 	1. OS X: 10.11, 10.10, 10.9, 10.8
 	2. Intel/desktop series: 9, 8, 7, 6, 5

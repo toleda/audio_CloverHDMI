@@ -69,7 +69,7 @@ Beta
 		1. HD4600+, HD4000, HD3000
 	4. AMD/default framebuffer (ATY,AMD,RadeonFramebuffer)
 		1. R7/R9 3xx, R7/R9 2xx, 7xxx, 6xxx, 5xxx  
-		2. Except: GCN 1.1/Hawaii/Bonaire (AMD8000Controller.kext)
+		2. Except: GCN 1.1/Hawaii/Bonaire/AMD8000Controller.kext
 	5. Nvidia (750, 9xx require Nvidia web drivers)
 		1. 9xx, 7xx, 6xx, 5xx, 4xx  
 		2. Except: 550, 560, 450 
@@ -174,12 +174,14 @@ Download appropriate guide from repo
 
 1. Boot Flags/Boot failure may result if ignored
 	1.	10.11+/Disable SIP/set, restart, install, enable SIP, restart
-		1.	CLOVER/config.plist/RtVariables/
-			1.	BooterConfig/0x28
-			2.	CsrActiveConfig/0x3
+		1.	CLOVER/config.plist/
+			1. ACPI/DSDT/Fixes/NO (all or remove)
+			2.	RtVariables/BooterConfig/0x28
+			3.	RtVariables/CsrActiveConfig/0x3
 	2.	10.10+/Allow unsigned kexts/set, restart, install
-		1.	Clover/config.plist
-			1.	Mandatory, Add: Boot/Arguments/kext-dev-mode=1
+		1. Clover/config.plist/
+			1. ACPI/DSDT/Fixes/NO (all or remove)
+			2. Boot/Arguments/kext-dev-mode=1
 2.	HD4600/HD4400/Mobile - no native support
 	1. README: [RehabMan OS-X-Fake-PCI-ID](https://github.com/RehabMan/OS-X-Fake-PCI-ID)
 	1. Downloads: [RehabMan OS-X-Fake-PCI-ID](https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads)
@@ -190,37 +192,10 @@ Download appropriate guide from repo
 		2.	Clover/kext patch: [HD4600/Desktop/AppleHDA edit](https://github.com/toleda/audio_CloverHDMI/blob/master/config-hdmi_hd4600-100.plist.zip)
 4.	HD2000/HD2500 not supported
 
-**IX - Tools**
+IX. [Problem Reporting](https://github.com/toleda/audio_ALC_guides/blob/master/Problem%20Reporting.md)  
 
-1. [IOReg_v2.1](https://github.com/toleda/audio_ALCInjection/blob/master/IORegistryExplorer_v2.1.zip) (select View Raw)
-2. [DPCIManger](http://sourceforge.net/projects/dpcimanager/)  
-3. [MaciASL](http://sourceforge.net/projects/maciasl/)
-4. Property List Editors -
-	1. [Xcode](https://developer.apple.com/xcode/)  
-	2. Property List Editor, PlistEdit Pro, TextEdit, etc.
-	3. TextEdit, TextWrangler (last resort)
-4. [Clover Configurator](http://www.osx86.net/files/file/49-clover-configurator/)
-6. [Clover Wiki](http://clover-wiki.zetam.org/Home)
-
-**X - Problem Reporting** (no files atached, no reply)
-
-1.	Description of HDMI audio problem
-2.	OS X version/motherboard model/BIOS version/processor/graphics
-3.	Procedure/Guide used
-4.	Installed S/L/E/AppleHDA.kext
-5.	Copy of IOReg - IOReg_v2.1/File/Save a Copy As…, verify file (Tools 1.)
-6.	Screenshot: DPCIManager/Status (Tools 2.) 
-7.	DPCIManager/Misc/Boot Log, atttach text file
-8.	MaciASL/File/Export Tableset As... (Tools 3.)
-9.	Terminal/Shell/File/Export Text As. . . /audio_cloverHDMI-110.command
-10.	Clover
-	1.	EFI/CLOVER/config.plist
-	2.	DPCIManager/Misc/Boot Log (Tools 2.)
-	3.	EFI/CLOVER/ACPI/Patched/dsdt.aml (if installed)
-	4.	EFI/CLOVER/ACPI/Patched/ssdt.aml (if installed)
-11.	Post to:
-	1.	[HDMI Audio - InsanelyMac.com](http://www.insanelymac.com/forum/topic/301137-yosemite-applehda-hdmi-audio/)
-	2. [HDMI Audio - tonymacx86.com](http://www.tonymacx86.com/hdmi-audio/143760-audio-hdmi-audio-applehda-guide.html)
+1.	Problem Reporting/Post to: 
+2.	Problem Reporting/Attached requested files
 
 Credit  
 [TimeWalker75a Post #118](http://www.insanelymac.com/  forum/topic/290783-intel-hd-graphics-4600-haswell-working-displayport/page-6#entry1949558)  

@@ -1,4 +1,4 @@
-Clover HDMI Audio AppleHDA [Guides]_v1.0
+Clover HDMI Audio AppleHDA [Guides]_v1.0  
 ![alt text](https://github.com/toleda/audio_RealtekALC/blob/master/sound.jpeg)
 #audio_cloverHDMI
 

@@ -42,6 +42,7 @@ Beta
 6. Support
 	1. OS X: 10.11, 10.10, 10.9, 10.8
 	2. Intel/desktop series: 9, 8, 7, 6, 5
+	3. Intel/x series: X99, X79, X58
 	3. Intel/desktop/graphics hd (native GPU Power Management)
 		1. Desktop: HD6200, HD4600+, HD4000, HD3000
 		2. BRIX/NUC: HD6100, HD6000, HD5500, HD5200, HD5000, HD4000

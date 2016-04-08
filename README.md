@@ -67,7 +67,7 @@ Beta
 1.	[HDMI audio](https://github.com/toleda/audio_hdmi_guides)  
 2.	[HDEF audio](https://github.com/toleda/audio_ALC_guides)
 
-[Problem Reporting](https://github.com/toleda/audio_ALC_guides/blob/master/Problem%20Reporting.md)  
+[Problem Reporting](https://github.com/toleda/audio_hdmi_guides/blob/master/Problem%20Reporting.md)  
 
 1.	Problem Reporting/Post to: 
 2.	Problem Reporting/Attached requested files

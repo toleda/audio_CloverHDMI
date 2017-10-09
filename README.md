@@ -6,8 +6,9 @@ Clover HDMI Audio AppleHDA [Guides]_v1.0
 Clover HDMI Audio - No kext patching/Persistant
 
 **Updates**  
-10/26/16 - Sierra support
-1/15/16 - El Capitan support, cloverHDMI script  
+10/19/17 - High Sierra support  
+10/26/16 - Sierra support  
+1/15/16 - El Capitan support, cloverHDMI script  
 12/2/14 - Yosemite, 9series support   
 Credit: TimeWalker/10.10+/HD4600 codec patch
 
@@ -20,7 +21,7 @@ Repo downloads: select link, select View Raw
 **cloverHDMI**  
 Beta  
 
-1. Download: [audio_cloverHDMI-...command](https://github.com/toleda/audio_CloverHDMI/blob/master/audio_cloverHDMI-120.command.zip) (select View Raw)
+1. Download: [audio_cloverHDMI-...command](https://github.com/toleda/audio_CloverHDMI/blob/master/audio_cloverHDMI-130.command.zip) (select View Raw)
 2. Installs HDMI audio ssdt(s) and edited config.plist
 	1. Intel/AMD/Nvidia: HDMI audio **ssdt** (EFI/CLOVER/ACPI/patched/)
 	2. Intel: DP2HDMI framebuffer edits (EFI/CLOVER/**config.plist**/KernelAndKextPatches/)
@@ -41,11 +42,11 @@ Beta
 	2. [cloverHDMI-Intel](https://github.com/toleda/audio_CloverHDMI/blob/master/cloverHDMI-Intel)
 	3. [cloverHDMI-AMD or Nvidia](https://github.com/toleda/audio_CloverHDMI/blob/master/cloverHDMI-AMD:Nvidia)
 6. Support
-	1. OS X: 10.12, 10.11, 10.10, 10.9, 10.8
+	1. OS X: 10.13, 10.12, 10.11, 10.10, 10.9, 10.8
 	2. Intel/desktop series: 100, 9, 8, 7, 6, 5
 	3. Intel/x series: X99, X79, X58
 	3. Intel/desktop/graphics hd (native GPU Power Management)
-		1. Desktop: HD530/540, HD6200, HD4600+, HD4000, HD3000
+		1. Desktop: HD630, HD530/540, HD6200, HD4600+, HD4000, HD3000
 		2. BRIX/NUC: HD6100, HD6000, HD5500, HD5200, HD5000, HD4000
 	4. AMD/default framebuffer (ATY,AMD,RadeonFramebuffer)
 		1. R7/R9 3xx, R7/R9 2xx, 7xxx, 6xxx, 5xxx  

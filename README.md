@@ -6,7 +6,7 @@ Clover HDMI Audio AppleHDA [Guides]_v1.0
 Clover HDMI Audio - No kext patching/Persistant
 
 **Updates**  
-10/19/17 - High Sierra support  
+09/19/17 - High Sierra support  
 10/26/16 - Sierra support  
 1/15/16 - El Capitan support, cloverHDMI script  
 12/2/14 - Yosemite, 9series support   

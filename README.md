@@ -1,10 +1,10 @@
   
 ![alt text](https://github.com/toleda/audio_RealtekALC/blob/master/sound.jpeg)
-#audio_cloverHDMI
+# audio_cloverHDMI
 
 **macOS Intel/AMD/Nvidia HDMI audio with Clover**  
 
-##11/8/18 - Deprecated
+## 11/8/18 - Deprecated
 
 Note: cloverHDMI script does not support Mojave and newer Skylake and newer framebuffer patching
 
